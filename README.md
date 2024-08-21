@@ -26,4 +26,4 @@ chmod +x rofi-wallpaper
 after that you can put the script in <code>/usr/local/bin/</code> or <code>~/.local/bin</code> to run it anywhere
 
 ## Tweaks
-function <code>set_wallpaper()</code> is called after selection (you can remove war or change swww to something you use)  
+function <code>set_wallpaper()</code> is called after selection (you can remove pywal part or change swww to something you use)  
