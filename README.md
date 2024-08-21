@@ -13,5 +13,6 @@ swww
 ```bash
 git clone https://github.com/kyncl/rofi-wallpaper/
 cd rofi-wallpaper
+chmod +x rofi-wallpaper
 ./rofi-wallpaper path/to/wallpapers
 ```
