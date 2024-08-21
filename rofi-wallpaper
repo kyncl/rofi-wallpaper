@@ -1,0 +1,33 @@
+#! /bin/bash
+
+main() {
+    local get_path=$1
+
+    if [[ "${get_path: -1}" != "/" ]]; then
+        local get_path="${get_path}/"
+    fi
+
+    selectedOption="$(ls $get_path | while read item; do
+        echo -en "$item\0icon\x1f$get_path$item\n"
+    done | rofi -dmenu -mesg "path: ${get_path}" -i)"
+    path="${get_path}${selectedOption}"
+    if [[ -f $path ]]; then
+        set_wallpaper
+        exit 1
+    elif [ "$selectedOption" == "../" ] || [ "$selectedOption" == "back" ]; then
+        shorterPath="$(dirname "$path")"
+        shorterPath="$(dirname "$shorterPath")"
+        main $shorterPath
+    elif [[ "$selectedOption" == "" ]]; then
+        exit 1
+    else
+        main $path
+    fi
+}
+
+set_wallpaper() {
+    notify-send "setting $selectedOption as wallpaper" -u low
+    wal -i $path && swww img $path --transition-type wipe
+}
+
+main $1
