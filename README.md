@@ -18,10 +18,10 @@ Nothing fancy-schmancy just using rofi to set new wallpaper
 ## Installation/Usage
 
 ```bash
-git clone https://github.com/kyncl/rofi-wallpaper/
-cd rofi-wallpaper
-chmod +x rofi-wallpaper
-./rofi-wallpaper path/to/wallpapers
+$ git clone https://github.com/kyncl/rofi-wallpaper/
+$ cd rofi-wallpaper
+$ chmod +x rofi-wallpaper
+$ ./rofi-wallpaper path/to/wallpapers
 ```
 after that you can put the script in <code>/usr/local/bin/</code> or <code>~/.local/bin</code> to run it anywhere
 
