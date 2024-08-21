@@ -11,7 +11,7 @@ swww
 
 ## Installation/Usage
 ```bash
-$ git clone 
+$ git clone git@github.com:kyncl/rofi-wallpaper.git
 $ cd rofi-wallpaper
 $ ./rofi-wallpaper path/to/wallpapers (most likely ~/Pictures/wallpapers)
 ```
